@@ -1,0 +1,17 @@
+/*==========  Global Styles  ==========*/
+
+html, body {
+  @extend %font-setup;
+  height: 100%;
+}
+html {
+  font-family: $font-body-text;
+  font-size: 62.5%;
+}
+body {
+  background: $color-body-background;
+  color: $color-text-body;
+  font-size: $font-base-size;
+  line-height: $font-line-height;
+  position: relative;
+}
