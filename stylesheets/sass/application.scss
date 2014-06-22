@@ -1,0 +1,16 @@
+/*==========  Libraries  ==========*/
+
+@import "_includes/_normalize.scss";
+@import "_includes/_variables.scss";
+@import "_includes/_mixins.scss";
+@import "_includes/_placeholders.scss";
+@import "_includes/_extends.scss";
+@import "_includes/_icons.scss";
+
+/*==========  Parts  ==========*/
+
+@import "_parts/_global.scss";
+@import "_parts/_header.scss";
+@import "_parts/_navigation.scss";
+@import "_parts/_main.scss";
+@import "_parts/_footer.scss";
