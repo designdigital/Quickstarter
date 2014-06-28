@@ -15,3 +15,17 @@ body {
   line-height: $font-line-height;
   position: relative;
 }
+h1, h2, h3, h4, h5, h6 {
+  @extend %heading-standard;
+}
+a,
+button {
+  @include transition(all);
+  outline: none;
+  &:hover {
+    @include transition(all);
+  }
+}
+p {
+  margin-top: 0;
+}
