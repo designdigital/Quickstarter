@@ -4,3 +4,7 @@
 /starter.sublime-workspace
 
 /stylesheets/sass/.sass-cache
+
+/node_modules/
+
+/.sass-cache/
