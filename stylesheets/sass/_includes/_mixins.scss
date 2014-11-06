@@ -1,3 +1,7 @@
+/*==============================
+=            Mixins            =
+==============================*/
+
 /*==========  Transitions  ==========*/
 
 @mixin transition($property: all, $time: 500ms, $type: ease-in-out, $delay: 0){
@@ -40,3 +44,4 @@
   box-shadow:         $horizontal $vertical $blur $spread $color;
 }
 
+/*-----  End of Mixins  ------*/

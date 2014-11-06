@@ -1,4 +1,6 @@
-/*==========  Global Styles  ==========*/
+/*==============================
+=            Global            =
+==============================*/
 
 html, body {
   @extend %font-setup;
@@ -29,3 +31,5 @@ button {
 p {
   margin: 0 0 1rem 0;
 }
+
+/*-----  End of Global  ------*/
