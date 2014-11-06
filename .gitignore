@@ -1,10 +1,7 @@
 /config.codekit
-
 /starter.sublime-project
 /starter.sublime-workspace
-
 /stylesheets/sass/.sass-cache
-
 /node_modules/
-
 /.sass-cache/
+.DS_Store
