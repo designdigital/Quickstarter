@@ -1,0 +1,138 @@
+/*==================================
+=            Typography            =
+==================================*/
+
+// Based on Typeplate
+
+/*==========  Headings  ==========*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include base-margin;
+  line-height: 1.1;
+}
+
+h1 {
+  @include font-size(48);
+}
+
+h2 {
+  @include font-size(36);
+}
+
+h3 {
+  @include font-size(24);
+}
+
+h4 {
+  @include font-size(21);
+}
+
+h5 {
+  @include font-size(18);
+}
+
+h6 {
+  @include font-size;
+}
+
+
+/*==========  Paragraphs  ==========*/
+
+p {
+  @include base-margin;
+}
+
+
+/*==========  Blockquotes  ==========*/
+
+blockquote {
+  + figcaption cite {
+
+  }
+}
+
+
+/*==========  Legal Text  ==========*/
+
+small {
+
+}
+
+
+/*==========  Code Blocks  ==========*/
+
+pre {
+  code {
+
+  }
+}
+
+code {
+
+}
+
+
+/*==========  Small Caps  ==========*/
+
+abbr {
+
+}
+
+
+/*==========  Unordered Lists  ==========*/
+
+ul {
+  li {
+
+  }
+}
+
+
+/*==========  Ordered Lists  ==========*/
+
+ol {
+  li {
+
+  }
+}
+
+
+/*==========  Definition Lists  ==========*/
+
+dt,
+dd {
+  display: inline;
+  margin: 0;
+}
+
+dd:after {
+  content: '\A';
+  white-space: pre;
+}
+
+
+/*==========  Tables  ==========*/
+
+table {
+  @include base-margin;
+}
+
+
+/*==========  Links  ==========*/
+
+a {
+
+}
+
+.button {
+  @include button;
+}
+
+
+/*-----  End of Typography  ------*/
+

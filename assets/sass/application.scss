@@ -1,0 +1,20 @@
+/*==========  Bower  ==========*/
+@import "bower_components/fontawesome/scss/font-awesome.scss";
+
+
+/*==========  Includes  ==========*/
+@import "_includes/normalize";
+@import "_includes/functions";
+@import "_includes/variables";
+@import "_includes/mixins";
+@import "_includes/extends";
+@import "_includes/typography";
+@import "_includes/forms";
+
+
+/*==========  Parts  ==========*/
+@import "_parts/global";
+@import "_parts/header";
+@import "_parts/navigation";
+@import "_parts/main";
+@import "_parts/footer";

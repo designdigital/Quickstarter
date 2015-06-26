@@ -1,0 +1,28 @@
+/*==============================
+=            Global            =
+==============================*/
+
+html, body {
+  @include font-setup;
+  height: 100%;
+}
+
+html {
+  font-family: $font-body-text;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  @include font-size;
+  background: $color-body-background;
+  color: $color-text-body;
+  line-height: $font-line-height;
+  position: relative;
+}
+
+/*-----  End of Global  ------*/

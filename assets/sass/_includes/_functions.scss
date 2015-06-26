@@ -1,0 +1,23 @@
+/*====================================
+=            Functions            =
+====================================*/
+
+@function rem($size) {
+  $remSize: $size / 10;
+  @return #{$remSize}rem;
+}
+
+
+@function assign-inputs($inputs, $pseudo: null) {
+  $list : ();
+
+  @each $input in $inputs {
+    $input: unquote($input);
+    $input: if($pseudo, $input + ":" + $pseudo, $input);
+    $list: append($list, $input, comma);
+  }
+
+  @return $list;
+}
+
+/*-----  End of Functions  ------*/

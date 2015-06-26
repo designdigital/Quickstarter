@@ -1,0 +1,12 @@
+{
+  "name": "the-snug-wp",
+  "version": "0.0.1",
+  "dependencies": {
+    "fontawesome": "~4.3.0",
+    "chosen": "~1.4.2"
+  },
+  "private": true,
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}

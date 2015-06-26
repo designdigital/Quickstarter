@@ -1,0 +1,125 @@
+/*==============================
+=            Mixins            =
+==============================*/
+
+/*==========  Helpers  ==========*/
+
+@mixin clearfix {
+  *zoom: 1;
+  &:after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+  &:before {
+    content: " ";
+    display: table;
+  }
+}
+
+@mixin visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+@mixin font-setup {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: text-top;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/*==========  Lists  ==========*/
+
+@mixin list-zero {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/*==========  Spacing & Sizing  ==========*/
+
+@mixin font-size( $size: $font-base-size ) {
+  font-size: $size + px;
+  font-size: rem($size);
+}
+
+@mixin base-margin {
+  margin: 0 0 0.5em 0;
+}
+
+
+/*==========  Buttons  ==========*/
+
+@mixin button {
+  @include transition;
+  background: $color-black;
+  color: $color-white;
+  border: none;
+  line-height: 1;
+  padding: rem(6) rem(10);
+  outline: none;
+  &:hover {
+    background: rgba($color-black, 0.75);
+  }
+}
+
+
+
+/*==========  Transitions  ==========*/
+
+@mixin transition($property: all, $time: 250ms, $type: linear){
+  transition: $property $time $type;
+}
+
+
+/*==========  Breakpoints  ==========*/
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1000px) { @content; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 999px) { @content; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 768px) and (max-width: 999px) { @content; }
+  }
+  @else if $point == phone {
+    @media (max-width: 767px)  { @content; }
+  }
+}
+
+
+/*==========  Box Sizing  ==========*/
+
+@mixin box-sizing($sizing-type: border-box){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/*==========  Shadow  ==========*/
+
+@mixin box-shadow($horizontal: 4px, $vertical: 4px, $blur: 4px, $spread: 1px, $color: rgba($color-main-dark, 0.3)){
+  box-shadow: $horizontal $vertical $blur $spread $color;
+}
+@mixin text-shadow($horizontal: 4px, $vertical: 4px, $blur: 4px, $color: rgba($color-main-dark, 0.3)) {
+  text-shadow: $horizontal $vertical $blur $color;
+}
+
+/*-----  End of Mixins  ------*/
