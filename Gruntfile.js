@@ -2,6 +2,40 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: [ 'bower_components/fontawesome/fonts/*' ],
+            dest: 'assets/fonts/'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: [
+              'bower_components/fontawesome/css/font-awesome.min.css',
+              'bower_components/chosen/chosen.min.css'
+            ],
+            dest: 'assets/sass/_imports/',
+            rename: function(dest, src) {
+              return dest + src.replace(/\.css$/, ".scss");
+            }
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: [
+              'bower_components/chosen/chosen-sprite.png',
+              'bower_components/chosen/chosen-sprite@2x.png'
+            ],
+            dest: 'assets/images/'
+          }
+        ],
+      },
+    },
+
     concat: {
       options: {
         sourceMap: true
@@ -37,6 +71,7 @@ module.exports = function(grunt) {
       main : {
         src : [
           'bower_components/jquery/dist/jquery.js',
+          'bower_components/handlebars/handlebars.min.js',
           'bower_components/chosen/chosen.jquery.min.js',
           'assets/javascripts/application/navigation.js',
           'assets/javascripts/application/main.js'
@@ -121,14 +156,26 @@ module.exports = function(grunt) {
         },
         files: ['assets/**/*.scss', 'assets/javascripts/*.js', '**/*.php', '**/*.html'],
       }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          base: '.'
+        }
+      }
     }
 
   });
+
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default',['concat', 'sass', 'watch']);
+  grunt.registerTask('default',['connect:server', 'copy', 'concat', 'sass', 'watch']);
 }

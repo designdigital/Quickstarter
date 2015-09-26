@@ -15,15 +15,26 @@
 </head>
 
 <body>
-  <header>
-    <h1>Snug HTML Starter</h1>
-  </header>
+  <script id="entry-header" type="text/x-handlebars-template">
+    {{> header}}
+  </script>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quasi nisi illum aliquid quia obcaecati earum pariatur aliquam est magnam.</p>
+  <script id="entry-template" type="text/x-handlebars-template">
+    <div class="entry">
+      <h2>{{title}}</h2>
+      <div class="body">
+        {{body}}
+      </div>
+    </div>
+  </script>
 
-  <footer>
-    <p>&copy; 2015</p>
-  </footer>
+  <script id="entry-footer" type="text/x-handlebars-template">
+    {{> footer}}
+  </script>
+
+  <header id="site-header"></header><!-- end of #main-navigation -->
+  <div id="output"></div><!-- end of .output -->
+  <footer id="site-footer"></footer><!-- end of #site-footer -->
 
   <!-- JavaScripts Start -->
   <script src="assets/javascripts/application.min.js"></script>

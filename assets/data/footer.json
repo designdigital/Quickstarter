@@ -1,0 +1,15 @@
+{
+  "title": "Static HTML Starter",
+  "links": [
+    {
+      "title": "Facebook",
+      "link": "#",
+      "icon": "facebook"
+    },
+    {
+      "title": "Twitter",
+      "link": "#",
+      "icon": "twitter"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Static HTML Starter",
+  "links": [
+    {
+      "title": "Home",
+      "link": "#",
+      "data-link": "main"
+    },
+    {
+      "title": "Contact",
+      "link": "#",
+      "data-link": "contact"
+    }
+  ]
+}
